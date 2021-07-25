@@ -25,8 +25,8 @@ function ItemCard({ item }) {
       <div className="image-container">
         <img
           src={"data:image/png;base64," + item.image}
-          height="100px"
-          width="100px"
+          height="150px"
+          width="200px"
           alt="Product image"
         />
       </div>
@@ -44,6 +44,7 @@ function ItemCard({ item }) {
             <input
               type="number"
               min="1"
+              max={item.quantity}
               value={itemQuantity}
               onChange={handleChange}
               className="quantity-input"
@@ -62,7 +63,7 @@ function ItemCard({ item }) {
         <Button
           variant="contained"
           color="secondary"
-          disabled={item.quantity === 0}
+          disabled={item.quantity === 0 || itemQuantity > item.quantity}
           onClick={() => onOrderItem(item)}
         >
           Order

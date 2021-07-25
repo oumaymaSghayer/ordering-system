@@ -42,7 +42,7 @@ function Order() {
       </List>
       <div className="order-actions">
         <Button variant="contained" onClick={() => onOrder()} color="secondary">
-          Order
+          Checkout
         </Button>
       </div>
     </Card>

@@ -24,7 +24,7 @@ function TopBar() {
             </Button>
             <Button color="inherit">
               <Link to="/order" className="nav-link">
-                My Order
+                Basket
               </Link>
             </Button>
           </div>
