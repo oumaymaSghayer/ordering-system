@@ -66,7 +66,7 @@ function ItemCard({ item }) {
           disabled={item.quantity === 0 || itemQuantity > item.quantity}
           onClick={() => onOrderItem(item)}
         >
-          Order
+          Add to basket
         </Button>
       </div>
     </Card>
