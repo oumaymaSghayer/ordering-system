@@ -35,6 +35,7 @@ function AddUser() {
           color="secondary"
           type="submit"
           className="form-submit"
+          disabled={name === ""}
         >
           Add User{" "}
         </Button>
