@@ -1,0 +1,90 @@
+.App {
+}
+.tool-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+}
+.home-container {
+  min-height: 85vh;
+  padding: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-card {
+  width: 250px;
+  height: 270px;
+  margin: 2rem;
+  padding: 2rem 1rem;
+}
+.image-container {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name-container {
+  margin: 1rem 0rem;
+}
+.warn-text {
+  color: red;
+}
+.item-card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-user-container {
+  margin: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.add-user-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-submit {
+  margin: 2rem !important;
+}
+.quantity-input {
+  width: 30px;
+}
+.stock-controls {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.order-list {
+  margin: 6rem;
+  padding: 2rem 1rem;
+}
+.order-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.order-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between !important;
+  align-items: center;
+}
+.delete-icon {
+  cursor: pointer;
+}
