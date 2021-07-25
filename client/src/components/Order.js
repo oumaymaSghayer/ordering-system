@@ -19,6 +19,7 @@ function Order() {
     } else {
       dispatch(createOrder(myCart));
       dispatch(refreshCart());
+      history.push("/home");
     }
   };
   const onDelete = (itemId) => {
