@@ -4,8 +4,10 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
-
+import Badge from "@material-ui/core/Badge";
+import { useSelector } from "react-redux";
 function TopBar() {
+  const myCart = useSelector((state) => state.order);
   return (
     <div className="App">
       <AppBar position="static">
@@ -22,11 +24,13 @@ function TopBar() {
                 Home
               </Link>
             </Button>
-            <Button color="inherit">
-              <Link to="/order" className="nav-link">
-                Basket
-              </Link>
-            </Button>
+            <Badge badgeContent={myCart.length} color="secondary">
+              <Button color="inherit">
+                <Link to="/order" className="nav-link">
+                  Basket
+                </Link>
+              </Button>
+            </Badge>
           </div>
         </Toolbar>
       </AppBar>

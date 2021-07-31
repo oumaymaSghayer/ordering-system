@@ -1,7 +1,5 @@
 import "./../App.css";
 import { useHistory } from "react-router-dom";
-
-import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { createOrder, refreshCart, removeItem } from "../redux/orderSlice";
 import List from "@material-ui/core/List";
@@ -23,7 +21,6 @@ function Order() {
     }
   };
   const onDelete = (itemId) => {
-    console.log(itemId);
     dispatch(removeItem(itemId));
   };
   return (
@@ -41,7 +38,12 @@ function Order() {
         ))}
       </List>
       <div className="order-actions">
-        <Button variant="contained" onClick={() => onOrder()} color="secondary">
+        <Button
+          variant="contained"
+          disabled={myCart.length === 0}
+          onClick={() => onOrder()}
+          color="secondary"
+        >
           Checkout
         </Button>
       </div>

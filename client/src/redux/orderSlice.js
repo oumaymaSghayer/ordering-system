@@ -30,9 +30,8 @@ export const orderSlice = createSlice({
       } else {
         state.push(action.payload);
       }
-      console.log(state);
     },
-    refreshCart: (state, action) => {
+    refreshCart: () => {
       return [];
     },
     removeItem: (state, action) => {
